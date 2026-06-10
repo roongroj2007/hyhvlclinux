@@ -1,0 +1,108 @@
+del all
+
+new bg broadcast enabled
+setup bg input /home/admin/hyhvlc/bg.jpg
+setup bg option image-duration=-1
+setup bg option image-fps=10/1
+setup bg output #transcode{sfilter=mosaic{width=1920,height=1080,cols=3,rows=2,position=1,order="1,2,3,4,5,6",keep-aspect-ratio=enabled,keep-picture=1,mosaic-align=0},vcodec=mp4v}:bridge-in:http{mux=ts,dst=:8090/hyhipcam}
+
+
+new ch1 broadcast enabled
+setup ch1 input "http://11.0.50.62:3488/videostream.cgi?user=admin&pwd=view2001"
+#setup ch1 option dshow-fps=10
+#setup ch1 option dshow-size="640x540"
+setup ch1 output #mosaic-bridge{id=1,width=640,height=540}
+
+new ch2 broadcast enabled
+setup ch2 input "http://11.0.50.55:3488/videostream.cgi?user=admin&pwd=view2001"
+#setup ch2 option dshow-fps=10
+#setup ch2 option dshow-size="640x540"
+setup ch2 output #mosaic-bridge{id=2,width=640,height=540}
+
+
+new ch3 broadcast enabled
+setup ch3 input "http://11.0.50.54:3488/videostream.cgi?user=admin&pwd=view2001"
+#setup ch3 option dshow-fps=10
+#setup ch3 option dshow-size="640x540"
+setup ch3 output #mosaic-bridge{id=3,width=640,height=540}
+
+new ch4 broadcast enabled
+setup ch4 input "http://11.0.50.56:3488/videostream.cgi?user=admin&pwd=view2001"
+#setup ch4 option dshow-fps=10
+#setup ch4 option dshow-size="640x540"
+setup ch4 output #mosaic-bridge{id=4,width=640,height=540}
+
+new ch5 broadcast enabled
+setup ch5 input "http://11.0.50.57:3488/videostream.cgi?user=admin&pwd=view2001"
+#setup ch5 option dshow-fps=10
+#setup ch5 option dshow-size="640x540"
+setup ch5 output #mosaic-bridge{id=5,width=640,height=540}
+
+new ch6 broadcast enabled
+setup ch6 input "http://11.0.50.58:3488/videostream.cgi?user=admin&pwd=view2001"
+#setup ch6 option dshow-fps=10
+#setup ch6 option dshow-size="640x540"
+setup ch6 output #mosaic-bridge{id=6,width=640,height=540}
+
+
+
+
+control bg play
+control ch1 play
+control ch2 play
+control ch3 play
+control ch4 play
+control ch5 play
+control ch6 play
+
+# Addon vlm command to stablilize mosaic display
+
+
+control ch1 stop
+control ch1 pause
+control ch1 play
+
+control ch2 stop
+control ch2 pause
+control ch2 play
+
+control ch3 stop
+control ch3 pause
+control ch3 play
+
+control ch4 stop
+control ch4 pause
+control ch4 play
+
+control ch5 stop
+control ch5 pause
+control ch5 play
+
+control ch6 stop
+control ch6 pause
+control ch6 play
+
+# repeat Addon vlm command to stablilize mosaic display
+control ch1 stop
+control ch1 pause
+control ch1 play
+
+control ch2 stop
+control ch2 pause
+control ch2 play
+
+control ch3 stop
+control ch3 pause
+control ch3 play
+
+control ch4 stop
+control ch4 pause
+control ch4 play
+
+control ch5 stop
+control ch5 pause
+control ch5 play
+
+control ch6 stop
+control ch6 pause
+control ch6 play

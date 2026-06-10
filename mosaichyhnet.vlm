@@ -83,26 +83,26 @@ control ch6 pause
 control ch6 play
 
 # repeat Addon vlm command to stablilize mosaic display
-control ch1 stop
-control ch1 pause
-control ch1 play
+# control ch1 stop
+# control ch1 pause
+# control ch1 play
 
-control ch2 stop
-control ch2 pause
-control ch2 play
+# control ch2 stop
+# control ch2 pause
+# control ch2 play
 
-control ch3 stop
-control ch3 pause
-control ch3 play
+# control ch3 stop
+# control ch3 pause
+# control ch3 play
 
-control ch4 stop
-control ch4 pause
-control ch4 play
+# control ch4 stop
+# control ch4 pause
+# control ch4 play
 
-control ch5 stop
-control ch5 pause
-control ch5 play
+# control ch5 stop
+# control ch5 pause
+# control ch5 play
 
-control ch6 stop
-control ch6 pause
-control ch6 play
+# control ch6 stop
+# control ch6 pause
+# control ch6 play

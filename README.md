@@ -18,4 +18,3 @@
 # trouble shooting
 7) if some channel ipput could not stream out 
     - check ip cctv camera port
-    - stop all server vlc process in step 4 and restart vlc server streaming in step 3ß
